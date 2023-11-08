@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./DisplayingCode.css";
 import ClipLoader from "react-spinners/ClipLoader";
 
-const DisplpayingCode = (props) => {
+const DisplpayingCode = (props: any) => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);

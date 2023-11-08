@@ -5,20 +5,17 @@ import DisplpayingCode from "./DisplpayingCode";
 const EnteringCode = () => {
   const [postal, setPostal] = useState("");
   const [fetchData, setFetchData] = useState(null);
-  const [error, SetError] = useState(null);
 
-  const postalCode = (event) => {
+  const postalCode = (event: any) => {
     setPostal(event.target.value);
   };
 
   const clearHandle = () => {
     setFetchData(null);
-    SetError(null);
   };
 
-  const apiget = (e) => {
+  const apiget = (e: any) => {
     e.preventDefault();
-    SetError(null);
     fetch("https://api.zippopotam.us/in/" + postal)
       .then((res) => {
         if (!res.ok) {
@@ -29,7 +26,6 @@ const EnteringCode = () => {
       })
       .then((data) => setFetchData(data))
       .catch((error) => {
-        SetError("An error occured while fetching the data");
         console.error("Error", error);
       });
   };
