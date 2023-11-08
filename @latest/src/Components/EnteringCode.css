@@ -1,0 +1,55 @@
+#number {
+  width: 40%;
+  border: 0.5px solid #000;
+  margin-top: 10px;
+  height: 35px;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.form label {
+  font-size: 2rem;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+.form button {
+  margin-top: 30px;
+  background-color: gray;
+  color: #fff;
+  padding: 4px 13px;
+  border-radius: 5px;
+}
+
+.btns {
+  display: flex;
+  gap: 20px;
+}
+
+.place-cards {
+  width: 25vw;
+}
+
+@media screen and (max-width: 768px) {
+  #number {
+    width: 70%;
+    border: 0.5px solid #000;
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 10px;
+  }
+
+  .place-cards {
+    width: 80vw;
+  }
+}
